@@ -1,5 +1,5 @@
 package com.tasty;
-//TODO: Add invalid exceptions for drink
+//TODO: Add invalid exceptions for drink, transfer drink sandwich etc logic to Order class
 import com.tasty.toppings.Meat;
 
 import java.util.ArrayList;
@@ -52,7 +52,7 @@ public class UserInterface {
                     String combo = scanner.nextLine();
 
                     if (combo.equalsIgnoreCase("y")) {
-                        processAddChip();
+                        processAddChip(scanner);
                         processAddDrink(scanner);
                         System.out.println("Combo successfully added.");
                     } else if (combo.equalsIgnoreCase("n")) {
@@ -65,7 +65,7 @@ public class UserInterface {
                     System.out.println("Drink added successfully.");
                     break;
                 case "3":
-                    processAddChip();
+                    processAddChip(scanner);
                     System.out.println("Chips added successfully.");
                     break;
                 case "4":
@@ -148,8 +148,19 @@ public class UserInterface {
 
         return new Drink(type, size);
     }
-    public Chips processAddChip() {
-        return null;
+    public Chips processAddChip(Scanner scanner) {
+
+        System.out.println("Please select the type of chip you would like to add:");
+        System.out.println("Salt & Vinegar");
+        System.out.println("Original");
+        System.out.println("Cheddar Sour Cream");
+        System.out.println("BBQ");
+        System.out.println("Hot Honey Jalapeño");
+        System.out.println("All-Dressed");
+
+        String type = scanner.nextLine();
+
+        return new Chips(type);
     }
     public void processCheckOut() {
 
