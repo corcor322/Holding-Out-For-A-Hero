@@ -15,7 +15,7 @@ public class UserInterface {
     public Drink processAddDrink() {
         return null;
     }
-    public Chip processAddChip() {
+    public Chips processAddChip() {
         return null;
     }
     public void processCheckOut() {
