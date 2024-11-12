@@ -1,5 +1,5 @@
 package com.tasty;
-
+//TODO: Add invalid exceptions for drink
 import com.tasty.toppings.Meat;
 
 import java.util.ArrayList;
@@ -53,7 +53,7 @@ public class UserInterface {
 
                     if (combo.equalsIgnoreCase("y")) {
                         processAddChip();
-                        processAddDrink();
+                        processAddDrink(scanner);
                         System.out.println("Combo successfully added.");
                     } else if (combo.equalsIgnoreCase("n")) {
                         System.out.println("Sandwich successfully added.");
@@ -61,7 +61,7 @@ public class UserInterface {
                         System.out.println("Invalid input. Please type 'y' for 'yes' or 'n' for 'no.'");
                     break;
                 case "2":
-                    processAddDrink();
+                    processAddDrink(scanner);
                     System.out.println("Drink added successfully.");
                     break;
                 case "3":
@@ -128,8 +128,25 @@ public class UserInterface {
 
         return new Sandwich(size, bread, toppings, isToasted);
     }
-    public Drink processAddDrink() {
-        return null;
+    public Drink processAddDrink(Scanner scanner) {
+
+
+        System.out.println("Please select the type of drink you would like to add:");
+        System.out.println("Root Beer");
+        System.out.println("Orange Soda");
+        System.out.println("Grape Soda");
+        System.out.println("Cola");
+        System.out.println("Water");
+        System.out.println("Lemonade");
+        String type = scanner.nextLine();
+
+        System.out.println("Enter the size drink you would like:");
+        System.out.println("Small");
+        System.out.printf("Medium");
+        System.out.println("Large");
+        String size = scanner.nextLine();
+
+        return new Drink(type, size);
     }
     public Chips processAddChip() {
         return null;
