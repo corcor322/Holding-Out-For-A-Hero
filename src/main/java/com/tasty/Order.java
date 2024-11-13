@@ -1,5 +1,7 @@
 package com.tasty;
 
+import com.tasty.toppings.*;
+
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -40,16 +42,133 @@ public class Order {
 
         String bread = scanner.nextLine();
 
-        ArrayList<String> toppings = new ArrayList<>();
+        ArrayList<Topping> toppings = new ArrayList<>();
+        ArrayList<Meat> meats = new ArrayList<>();
+        ArrayList<Cheese> cheeses = new ArrayList<>();
+        ArrayList<Sauce> sauces = new ArrayList<>();
+        ArrayList<RegularTopping> regularToppings = new ArrayList<>();
         // Add logic for meat, cheese, regular toppings and sauce
+
+
+        
+        //MEATMEATMEATMEATMEATMEATMEAT
+        System.out.println("Would you like to add meat to your sandwich? y/n");
+        String wantMeat = scanner.nextLine();
+
+        while (wantMeat.equalsIgnoreCase("y")) {
+            System.out.println("What kind of meat would you like to add?:");
+            System.out.println("Steak");
+            System.out.println("Ham");
+            System.out.println("Salami");
+            System.out.println("Roast Beef");
+            System.out.println("Chicken");
+            System.out.println("Bacon");
+
+            String myMeat = scanner.nextLine();
+
+            switch (myMeat.toLowerCase()) {
+                case "steak":
+                case "ham":
+                case "salami":
+                case "roast beef":
+                case "chicken":
+                case "bacon":
+                    Meat meat = new Meat(myMeat);
+                    meats.add(meat);
+                    System.out.println("Meat successfully added.");
+                    break;
+                default:
+                    System.out.println("Invalid input. Please specify one of the meat types provided.");
+                    continue; // Re-prompt for valid meat type
+            }
+
+            // Ask if the user wants to add more meat
+            System.out.println("Would you like to add another meat? y/n");
+            wantMeat = scanner.nextLine();
+
+            if (!wantMeat.equalsIgnoreCase("y") && !wantMeat.equalsIgnoreCase("n")) {
+                System.out.println("Invalid option. Please enter 'y' for 'yes' or 'n' for 'no.'");
+                break; // Exit if an invalid response is given
+            }
+        }
+
+        if (wantMeat.equalsIgnoreCase("n")) {
+            System.out.println("No more meat will be added.");
+        }
+        //MEATMEATMEATMEATMEATMEAT
+
+
+
+
+
+        //CHEESECHEESECHEESECHEESECHEESE
+
+
+        System.out.println("Would you like to add cheese to your sandwich? y/n");
+        String wantCheese = scanner.nextLine();
+
+        while (wantCheese.equalsIgnoreCase("y")) {
+            System.out.println("What kind of meat would you like to add?:");
+            System.out.println("American");
+            System.out.println("Provolone");
+            System.out.println("Cheddar");
+            System.out.println("Swiss");
+
+            String myCheese = scanner.nextLine();
+
+            switch (myCheese.toLowerCase()) {
+                case "american":
+                case "provolone":
+                case "cheddar":
+                case "swiss":
+                    Cheese cheese = new Cheese(myCheese);
+                    cheeses.add(cheese);
+                    System.out.println("Cheese successfully added.");
+                    break;
+                default:
+                    System.out.println("Invalid input. Please specify one of the cheese types provided.");
+                    continue; // Re-prompt for valid cheese type
+            }
+
+            // Ask if the user wants to add more cheese
+            System.out.println("Would you like to add another cheese? y/n");
+            wantCheese = scanner.nextLine();
+
+            if (!wantCheese.equalsIgnoreCase("y") && !wantCheese.equalsIgnoreCase("n")) {
+                System.out.println("Invalid option. Please enter 'y' for 'yes' or 'n' for 'no.'");
+                break; // Exit if an invalid response is given
+            }
+        }
+
+        if (wantCheese.equalsIgnoreCase("n")) {
+            System.out.println("No more cheese will be added.");
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        //CHEESECHEESECHEESECHEESECHEESE
 
         System.out.println("Would you like your sandwich toasted? y/n");
 
         String toasted = scanner.nextLine();
         boolean isToasted = toasted.equalsIgnoreCase("y");
 
-        if (!toasted.equalsIgnoreCase("y") && !toasted.equalsIgnoreCase("n")) {
-            System.out.println("Invalid option. Please enter 'y' for yes or 'n' for 'no.'");
+        if (!toasted.equalsIgnoreCase("y") && (!toasted.equalsIgnoreCase("n"))) {
+            System.out.println("Invalid option. Please enter 'y' for 'yes' or 'n' for 'no.'");
             return; // Exit if the input is invalid
         }
 
