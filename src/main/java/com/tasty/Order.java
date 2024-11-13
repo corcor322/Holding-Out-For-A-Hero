@@ -347,7 +347,7 @@ public class Order {
         System.out.println("Original");
         System.out.println("Cheddar Sour Cream");
         System.out.println("BBQ");
-        System.out.println("Hot Honey Jalapeño");
+        System.out.println("Hot Honey Jalapeno");
         System.out.println("All-Dressed");
 
         String type = scanner.nextLine();
