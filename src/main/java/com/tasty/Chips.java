@@ -9,6 +9,6 @@ public class Chips implements IPriceable{
 
     @Override
     public double calculatePrice() {
-        return IPriceable.super.calculatePrice();
+        return 1.50;
     }
 }
