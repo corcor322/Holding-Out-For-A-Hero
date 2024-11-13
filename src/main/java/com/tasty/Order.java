@@ -50,7 +50,7 @@ public class Order {
         // Add logic for meat, cheese, regular toppings and sauce
 
 
-        
+
         //MEATMEATMEATMEATMEATMEATMEAT
         System.out.println("Would you like to add meat to your sandwich? y/n");
         String wantMeat = scanner.nextLine();
@@ -161,6 +161,101 @@ public class Order {
 
 
         //CHEESECHEESECHEESECHEESECHEESE
+
+
+
+
+        //REGULARREGULARREGULARREGULAR
+
+        System.out.println("Would you like to add any other toppings to your sandwich? y/n");
+        String wantVeggies = scanner.nextLine();
+
+        while (wantVeggies.equalsIgnoreCase("y")) {
+            System.out.println("What kind of toppings would you like to add?:");
+            System.out.println("Lettuce");
+            System.out.println("Peppers");
+            System.out.println("Onions");
+            System.out.println("Tomatoes");
+            System.out.println("Jalapenos");
+            System.out.println("Cucumbers");
+            System.out.println("Pickles");
+            System.out.println("Guacamole");
+            System.out.println("Mushrooms");
+
+            String myVeg = scanner.nextLine();
+
+            switch (myVeg.toLowerCase()) {
+                case "lettuce":
+                case "peppers":
+                case "onions":
+                case "tomatoes":
+                case "jalapenos":
+                case "cucumbers":
+                case "pickles":
+                case "guacamole":
+                case "mushrooms":
+                    RegularTopping regularTopping = new RegularTopping(myVeg);
+                    regularToppings.add(regularTopping);
+                    System.out.println("Topping successfully added.");
+                    break;
+                default:
+                    System.out.println("Invalid input. Please specify one of the toppings provided.");
+                    continue; // Re-prompt for valid cheese type
+            }
+
+            // Ask if the user wants to add more cheese
+            System.out.println("Would you like to add another topping? y/n");
+            wantVeggies = scanner.nextLine();
+
+            if (!wantVeggies.equalsIgnoreCase("y") && !wantVeggies.equalsIgnoreCase("n")) {
+                System.out.println("Invalid option. Please enter 'y' for 'yes' or 'n' for 'no.'");
+                break; // Exit if an invalid response is given
+            }
+        }
+
+        if (wantCheese.equalsIgnoreCase("n")) {
+            System.out.println("No more toppings will be added.");
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        //REGULARREGULARREGULAR
+
+
+
+
+
+
+
+
+
+
+
+        //SAUCESAUCESAUCE
+
+
+
+
+
+
+
+
+
+        //SAUCESAUCESAUCE
 
         System.out.println("Would you like your sandwich toasted? y/n");
 
