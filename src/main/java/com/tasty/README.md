@@ -1,22 +1,22 @@
-# Financial Tracker
-
+# Holding Out For A Hero
+//TODO: Resources and screenshots
 ## Description of the Project
 
-This java application tracks ingoing and outgoing finances. It functions as an electronic version of a checkbook ledger, and it's target audience is your everyday worker. This solves a few problems,
-including misplacing a physical checkbook, budget mismanagement, and tracking the flow of money over different financial apps that do not integrate with each other, such as a couple with individual accounts
-tracking their expenses as a house.
+This java application is a Sandwich shop. It allows the customer to order sandwiches and customize the bread, size, and toppings.
+The customer can add multiple sandwiches, drinks, and chips to their order. Checking out will leave them with a receipt of the date
+ and time of their purchase and the items they've ordered.
 
 ## User Stories
 
-List the user stories that guided the development of your application. Format these stories as: "As a [type of user], I want [some goal] so that [some reason]."
+These are the user stories that guided me through development:
 
-- As a user, I want to add and track deposits and payments to keep my account up to date.
-- As a user, I want a menu with clear directions so that I can easily navigate where I need to go.
-- As a user, I want the ability to filter my ledger to only show deposits or payments so that I can better track my money.
-- As a user, I want the ability to navigate in and out of different parts of the menu without closing the application so that I can save time and effort.
-- As a user, I want the ability to view a list of past transactions to moniotr my spending and income.
-- As a user, I want the ability to generate reports on my spending and income at a specific vendor or timeframe so that I can make clear decisions about my budget.
-- As a user, I want the ability to save my added transactions so that they are still there when I exit and restart the application.
+- As a customer, I want to be able to order sandwiches, drinks, and chips so that I can eat yummy food.
+- As a customer, I want a clear and navigable order screen so that using the applications is intuitive.
+- As a customer, I want to be able to define bread choice and toppings to further customize my order.
+- As a customer, I want to be able to add multiple sandwiches and drinks to the same order so that I can treat my friends.
+- As a customer, I want the ability to cancel my order and go back to the home screen so that I am not locked into a purchase I no longer want.
+- As a customer, I want to confirm the price and details of my order before payment to ensure I get what I want.
+- As a customer, I want a receipt with the date and time of my purchase on it so I can track my expenses.
 
 ## Setup
 
@@ -34,8 +34,8 @@ Follow these steps to get your application running within IntelliJ IDEA:
 1. Open IntelliJ IDEA.
 2. Select "Open" and navigate to the directory where you cloned or downloaded the project.
 3. After the project opens, wait for IntelliJ to index the files and set up the project.
-4. Find the main class with the `public static void main(String[] args)` method. This is in the class titled "FinancialTracker".
-5. Right-click on the file and select 'Run 'FinancialTracker.main()'' to start the application.
+4. Find the main class with the `public static void main(String[] args)` method. This is in the class titled "Main".
+5. Right-click on the file and select 'Run 'Main.main()'' to start the application.
 
 ## Technologies Used
 
@@ -55,12 +55,12 @@ Here are some screenshots of the program in action:
 ## Future Work
 
 Additional work that could be done with this project:
-- The ability to perform custom searches based on all fields
-- The ability to perform searches with partial matches for key terms
-- Adding the ability to leave fields blank when creating entries
-- Not including seconds in the time field
-- Cleaning up code with better logic. I'm sure there's a better way to implement some of these methods.
+- Customer profiles tracking email or phone number and offering discounts to repeat customers after they spend a certain amount
 - Adding a GUI
+- More options for sandwich customization
+- Applying a discount when a combo is ordered
+- Adding signature sandwiches and giving each one a name pun
+- Expanding sides to include fresh fruit, fries, or a pickle
 
 ## Resources
 
@@ -74,12 +74,12 @@ In addition to the material covered in class, the following tutorials and docume
 
 ## Team Members
 
-- **Raymond Maroun** - Contributed skeleton code for initial commit.
+- Corrie Salerno-Brazell: Sole developer
 
 
 ## Thanks
 
 
-- Many thanks to Raymond, my Java bootcamp instructor, for being on standby to help with issues in my code and navigating git/github.
-- A big thank you to Cameron for helping me debug my writeToFile method.
-- Special thanks to Carmen and Aaron for their motivation, advice, help finding curly braces, and teaching me about the temporal adjuster.
+- Many thanks to Raymond, my Java bootcamp instructor, for being on standby to help with issues in my code.
+- Thanks to Aaron for help on the checkOut method.
+- Special thanks to Cameron for taking time to review my code and guide me through the price method overrides.
