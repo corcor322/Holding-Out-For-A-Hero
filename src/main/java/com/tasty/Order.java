@@ -359,5 +359,8 @@ public class Order {
         chips.add(chip);
         System.out.println("Chips added to the order!");
     }
+    public void checkOut() {
+        FileManager fileManager = new FileManager();
+    }
 }
 

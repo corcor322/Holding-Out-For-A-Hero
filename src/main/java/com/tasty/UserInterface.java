@@ -69,7 +69,7 @@ public class UserInterface {
                     System.out.println("Chips added successfully.");
                     break;
                 case "4":
-                    processCheckOut();
+                    processCheckOut(order);
                     break;
                 case "0":
                     cancelOrder(scanner);
@@ -89,7 +89,7 @@ public class UserInterface {
     public void processAddChip(Order order, Scanner scanner) {
         order.addChips(scanner);
     }
-    public void processCheckOut() {
+    public void processCheckOut(Order order) { order.checkOut();
 
     }
     public void cancelOrder(Scanner scanner) {
