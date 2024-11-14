@@ -6,6 +6,7 @@ import com.tasty.fooditems.Sandwich;
 import com.tasty.toppings.*;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.Scanner;
 
 public class Order {
@@ -20,6 +21,7 @@ public class Order {
     }
 
     public void addSandwich(Scanner scanner) {
+
         System.out.println("Select the size of sandwich you would like to add:");
         System.out.println("Small- 4 inches/10.16 cm");
         System.out.println("Medium- 8 inches/20.32 cm");
@@ -324,6 +326,7 @@ public class Order {
     }
 
     public void addDrink(Scanner scanner) {
+
         System.out.println("Please select the type of drink you would like to add:");
         System.out.println("Root Beer");
         System.out.println("Orange Soda");
@@ -345,6 +348,7 @@ public class Order {
     }
 
     public void addChips(Scanner scanner) {
+
         System.out.println("Please select the type of chip you would like to add:");
         System.out.println("Salt & Vinegar");
         System.out.println("Original");
@@ -360,7 +364,26 @@ public class Order {
         System.out.println("Chips added to the order!");
     }
     public void checkOut() {
+
         FileManager fileManager = new FileManager();
+    }
+    public double getPrice() {
+        double totalPrice = 0;
+        for (Sandwich sandwich: sandwiches) {
+            totalPrice += sandwich.calculatePrice();
+        }
+        for (Drink drink: drinks) {
+            totalPrice += drink.calculatePrice();
+        }
+        for (Chips chips: chips) {
+            totalPrice += chips.calculatePrice();
+        }
+        return totalPrice;
+    }
+    public void clearOrder() {
+        sandwiches.clear();
+        chips.clear();
+        drinks.clear();
     }
 }
 

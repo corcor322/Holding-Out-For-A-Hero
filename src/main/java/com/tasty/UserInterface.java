@@ -72,7 +72,8 @@ public class UserInterface {
                     processCheckOut(order);
                     break;
                 case "0":
-                    cancelOrder(scanner);
+                    cancelOrder(scanner, order);
+                    quit = true;
                     break;
                 default:
                     System.out.println("Invalid choice. Please type a number 0-4");
@@ -92,15 +93,17 @@ public class UserInterface {
     public void processCheckOut(Order order) { order.checkOut();
 
     }
-    public void cancelOrder(Scanner scanner) {
+    public void cancelOrder(Scanner scanner, Order order) {
+
         System.out.println("Are you sure you want to cancel your order? Y/N");
         String cancelOrder = scanner.nextLine();
 
         if (cancelOrder.equalsIgnoreCase("y")) {
-
+            order.clearOrder();
+            System.out.println("Order has been successfully cancelled. Returning to the home screen.");
         } else if (cancelOrder.equalsIgnoreCase("n")) {
-
+            System.out.println("Order not cancelled. Returning to order screen.");
         } else
-            System.out.println("Invalid input. Please type 'y' to cancel order or 'n' to cancel.");
+            System.out.println("Invalid input. Please type 'y' to cancel order or 'n' to continue.");
     }
 }
