@@ -1,6 +1,8 @@
-package com.tasty;
+package com.tasty.fooditems;
 
-public class Chips implements IPriceable{
+import com.tasty.IPriceable;
+
+public class Chips implements IPriceable {
     private String type;
 
     public Chips(String type) {

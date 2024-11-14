@@ -1,5 +1,8 @@
 package com.tasty;
 
+import com.tasty.fooditems.Chips;
+import com.tasty.fooditems.Drink;
+import com.tasty.fooditems.Sandwich;
 import com.tasty.toppings.*;
 
 import java.util.ArrayList;

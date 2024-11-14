@@ -1,10 +1,11 @@
-package com.tasty;
+package com.tasty.fooditems;
 
+import com.tasty.IPriceable;
 import com.tasty.toppings.Topping;
 
 import java.util.ArrayList;
 
-public class Sandwich implements IPriceable{
+public class Sandwich implements IPriceable {
     private String size;
     private String bread;
     private ArrayList toppings;
