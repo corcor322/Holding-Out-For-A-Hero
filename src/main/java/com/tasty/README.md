@@ -46,17 +46,17 @@ Follow these steps to get your application running within IntelliJ IDEA:
 
 Here are some screenshots of the program in action:
 
-![Main Menu](src/main/resources/mainMenu.png)
-![Add Deposit](src/main/resources/addDeposit.png)
-![Invalid Format](src/main/resources/invalidFormat.png)
-![Ledger Menu](src/main/resources/ledgerMenu.png)
-![Reports](src/main/resources/reports.png)
+![Order Menu](src/main/resources/ordermenu.png)
+![Receipts](src/main/resources/addDeposit.png)
+![Combo](src/main/resources/combo.png)
+![Checkout](src/main/resources/ledgerMenu.png)
+
 
 ## Future Work
 
 Additional work that could be done with this project:
+- Getting toppings added CORRECTLY
 - Customer profiles tracking email or phone number and offering discounts to repeat customers after they spend a certain amount
-- Adding a GUI
 - More options for sandwich customization
 - Applying a discount when a combo is ordered
 - Adding signature sandwiches and giving each one a name pun
@@ -66,10 +66,8 @@ Additional work that could be done with this project:
 
 In addition to the material covered in class, the following tutorials and documentation were a great help to me:
 
-- [Java Create and Write to Files](https://www.w3schools.com/java/java_files_create.asp)
-- [Java Time LocalDate Class](https://www.tutorialspoint.com/javatime/javatime_localdate.htm)
-- [Temporal Adjuster](https://docs.oracle.com/javase/tutorial/datetime/iso/adjusters.html)
-- [Compare Two LocalDate Instances in Java](https://howtodoinjava.com/java/date-time/compare-localdates/#:~:text=LocalDate%20equals()%20Method,can%20use%20equals()%20method.)
+- [r/javahelp](https://www.reddit.com/r/javahelp/?rdt=52340)
+- [w3schools](https://www.w3schools.com/)
 
 
 ## Team Members
@@ -80,6 +78,6 @@ In addition to the material covered in class, the following tutorials and docume
 ## Thanks
 
 
-- Many thanks to Raymond, my Java bootcamp instructor, for being on standby to help with issues in my code.
-- Thanks to Aaron for help on the checkOut method.
+- Many thanks to Raymond, my Java bootcamp instructor, for helping me troubleshoot the scanner and guiding me on the checkOut method.
+- Thanks to Aaron for help on the checkOut method and my meat and cheese.
 - Special thanks to Cameron for taking time to review my code and guide me through the price method overrides.

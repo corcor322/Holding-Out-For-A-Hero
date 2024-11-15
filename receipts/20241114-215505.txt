@@ -1,0 +1,12 @@
+Order Receipt
+---------------
+Sandwiches:
+large wrap 8.5
+
+Drinks:
+large root beer 3.0
+
+Chips:
+salt & vinegar 1.5
+
+Total Price: $13.00
