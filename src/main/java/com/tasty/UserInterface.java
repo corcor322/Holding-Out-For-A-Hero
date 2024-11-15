@@ -17,6 +17,7 @@ public class UserInterface {
         System.out.println("0) Exit");
 
         int homeChoice = scanner.nextInt();
+        scanner.nextLine();
         if (homeChoice == 1) {
             newOrder(scanner);
         } else if (homeChoice == 0) {
@@ -40,9 +41,9 @@ public class UserInterface {
             System.out.println("2) Add Drink");
             System.out.println("3) Add Chips");
             System.out.println("4) Checkout");
-            System.out.println("0) Cancel Order - return to homescreen");
+            System.out.println("0) Cancel Order - return to home screen");
 
-            scanner.nextLine();
+
             String choice = scanner.nextLine();
 
             switch (choice) {
@@ -69,11 +70,10 @@ public class UserInterface {
                     System.out.println("Chips added successfully.");
                     break;
                 case "4":
-                    processCheckOut(order);
+                    processCheckOut(order, scanner);
                     break;
                 case "0":
-                    cancelOrder(scanner, order);
-                    quit = true;
+                    quit = cancelOrder(scanner, order);
                     break;
                 default:
                     System.out.println("Invalid choice. Please type a number 0-4");
@@ -90,10 +90,10 @@ public class UserInterface {
     public void processAddChip(Order order, Scanner scanner) {
         order.addChips(scanner);
     }
-    public void processCheckOut(Order order) { order.checkOut();
+    public void processCheckOut(Order order, Scanner scanner) { order.checkOut(scanner);
 
     }
-    public void cancelOrder(Scanner scanner, Order order) {
+    public boolean cancelOrder(Scanner scanner, Order order) {
 
         System.out.println("Are you sure you want to cancel your order? Y/N");
         String cancelOrder = scanner.nextLine();
@@ -101,9 +101,12 @@ public class UserInterface {
         if (cancelOrder.equalsIgnoreCase("y")) {
             order.clearOrder();
             System.out.println("Order has been successfully cancelled. Returning to the home screen.");
+            return true;
         } else if (cancelOrder.equalsIgnoreCase("n")) {
             System.out.println("Order not cancelled. Returning to order screen.");
+            return false;
         } else
             System.out.println("Invalid input. Please type 'y' to cancel order or 'n' to continue.");
+        return false;
     }
 }

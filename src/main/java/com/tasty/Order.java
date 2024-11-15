@@ -363,9 +363,33 @@ public class Order {
         chips.add(chip);
         System.out.println("Chips added to the order!");
     }
-    public void checkOut() {
+    public void checkOut(Scanner scanner) {
+        double totalPrice = getPrice();
 
-        FileManager fileManager = new FileManager();
+        System.out.println("Order Summary:");
+        for (Sandwich sandwich: sandwiches) {
+            System.out.println("Sandwich: " +
+                    sandwich.getSize() +
+                    " " + sandwich.getBread() +
+                    " $" + sandwich.calculatePrice());
+        }
+        for (Drink drink: drinks) {
+            System.out.println("Drink: " + drink.getType() + "(" + drink.getSize() + ") - $" + drink.calculatePrice());
+        }
+        for (Chips chips: chips) {
+            System.out.println("Chips: " + chips.getType() + " - $" + chips.calculatePrice());
+        }
+        System.out.printf("\nTotal Price: $%.2f\n", totalPrice);
+
+        System.out.println("Do you want to confirm the order? y/n");
+        String confirmation = scanner.nextLine();
+
+        if (confirmation.equalsIgnoreCase("y")) {
+            FileManager fileManager = new FileManager();
+            fileManager.saveReceipt(sandwiches, drinks, chips, totalPrice);
+        } else {
+            System.out.println("Order not confirmed. Returning to the menu.");
+        }
     }
     public double getPrice() {
         double totalPrice = 0;

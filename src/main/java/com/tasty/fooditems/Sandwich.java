@@ -73,4 +73,9 @@ public class Sandwich implements IPriceable {
         double price = toppingsPrice + basePrice;
         return price;
     }
+
+    @Override
+    public String toString() {
+        return size + " " + bread + " " + calculatePrice();
+    }
 }

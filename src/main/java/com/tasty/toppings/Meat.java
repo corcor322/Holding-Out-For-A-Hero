@@ -7,23 +7,20 @@ public class Meat extends PremiumTopping{
         this.meat = meat;
     }
 
-    /*@Override
-    public double calculatePrice() {
-        String size = order.Sandwich.getsize;
+    @Override
+    public double calculatePrice(String size) {
+
         switch (size) {
             case "small":
                 return 1.00;
-                break;
             case "medium":
                 return 2.00;
-                break;
             case "large":
                 return 3.00;
-                break;
             default:
-                return 0
+                return 0;
         }
 
-        ;
-    }*/
+
+    }
 }

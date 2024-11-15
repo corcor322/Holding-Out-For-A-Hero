@@ -1,0 +1,10 @@
+Order Receipt
+---------------
+Sandwiches:
+
+Drinks:
+
+Chips:
+com.tasty.fooditems.Chips@21b8d17c
+
+Total Price: $1.50

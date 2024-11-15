@@ -6,6 +6,14 @@ public class Drink implements IPriceable {
     private String type;
     private String size;
 
+    public String getType() {
+        return type;
+    }
+
+    public String getSize() {
+        return size;
+    }
+
     public Drink(String type, String size) {
         this.type = type;
         this.size = size;
@@ -22,5 +30,10 @@ public class Drink implements IPriceable {
             price = 3.00;
         }
         return price;
+    }
+
+    @Override
+    public String toString() {
+        return size + " " + type + " " + calculatePrice();
     }
 }

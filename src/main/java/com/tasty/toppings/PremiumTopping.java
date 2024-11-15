@@ -1,7 +1,7 @@
 package com.tasty.toppings;
 
 public abstract class PremiumTopping extends Topping{
-    public double calculatePrice() {
+    public double calculatePrice(String size) {
         return 0;
     }
 }
