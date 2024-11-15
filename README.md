@@ -1,4 +1,5 @@
 # Holding Out For A Hero
+![image](https://github.com/user-attachments/assets/749e43e5-e2bd-4743-9760-861198c29f2a)
 
 ## Description of the Project
 
